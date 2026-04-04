@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:myportfolio/constants/colors.dart';
-import 'package:myportfolio/utils/project_utils.dart';
+import 'package:myportfolio/models/projects_model.dart';
 import 'package:web/web.dart' as web;
 
 class ProjectCardWidget extends StatelessWidget {
-  final ProjectUtils project;
+  final ProjectsModel project;
   const ProjectCardWidget({super.key, required this.project});
 
   @override
@@ -23,7 +23,7 @@ class ProjectCardWidget extends StatelessWidget {
         children: [
           //project image
           Image.asset(
-            project.image,
+            project.thumbnail,
             height: 140,
             width: 260,
             fit: BoxFit.cover,
@@ -44,6 +44,7 @@ class ProjectCardWidget extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
             child: Text(
               overflow: TextOverflow.ellipsis,
+              maxLines: 3,
               project.subtitle,
               style: TextStyle(fontSize: 12, color: CustomColor.whiteSecondary),
             ),
@@ -59,14 +60,26 @@ class ProjectCardWidget extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  'Available on:',
+                  'Available:',
                   style: TextStyle(
                     color: CustomColor.yellowSecondary,
                     fontSize: 10,
                   ),
                 ),
                 Spacer(),
-
+                if (project.sourceCode != null)
+                  Padding(
+                    padding: const EdgeInsets.only(right: 6),
+                    child: InkWell(
+                      onTap: () {
+                        web.window.open(project.iosLink!, "_blank");
+                      },
+                      child: Image.asset(
+                        'assets/images/sourceCodeWhite.png',
+                        width: 20,
+                      ),
+                    ),
+                  ),
                 if (project.iosLink != null)
                   InkWell(
                     onTap: () {

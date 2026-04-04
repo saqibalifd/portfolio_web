@@ -41,10 +41,10 @@ class MainDesktop extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    web.window.open(SnsLinks.linkedin, "_blank");
+                    web.window.open(SnsLinks.cvLink, "_blank");
                   },
                   child: Text(
-                    'Get in touch',
+                    'View Resume',
                     style: TextStyle(color: CustomColor.whitePrimary),
                   ),
                 ),

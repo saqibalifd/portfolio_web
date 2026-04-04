@@ -1,4 +1,6 @@
 class SnsLinks {
+  static const String cvLink =
+      'https://drive.google.com/file/d/1iw9zACtwgrUVXLEwcagATySDKZV9N5Ya/view?usp=sharing';
   static const String github = "https://github.com/saqibalifd";
   static const String facebook =
       "https://www.facebook.com/profile.php?id=61552719263001";
