@@ -282,7 +282,7 @@ class _SectionHeader extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(6),
           decoration: BoxDecoration(
-            color: const Color(0xFF6C63FF).withOpacity(0.12),
+            color: const Color(0xFF6C63FF).withValues(alpha: 0.12),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Icon(icon, color: const Color(0xFF6C63FF), size: 16),
@@ -412,7 +412,7 @@ class _ProjectTypeToggle extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(6),
               decoration: BoxDecoration(
-                color: const Color(0xFF6C63FF).withOpacity(0.12),
+                color: const Color(0xFF6C63FF).withValues(alpha: 0.12),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: const Icon(
@@ -502,11 +502,14 @@ class _TypeOption extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 12),
           decoration: BoxDecoration(
             color: isActive
-                ? activeColor.withOpacity(0.15)
+                ? activeColor.withValues(alpha: 0.15)
                 : Colors.transparent,
             borderRadius: BorderRadius.circular(10),
             border: isActive
-                ? Border.all(color: activeColor.withOpacity(0.4), width: 1.5)
+                ? Border.all(
+                    color: activeColor.withValues(alpha: 0.4),
+                    width: 1.5,
+                  )
                 : Border.all(color: Colors.transparent),
           ),
           child: Row(
@@ -561,7 +564,7 @@ class _SubmitButton extends StatelessWidget {
               ? []
               : [
                   BoxShadow(
-                    color: const Color(0xFF6C63FF).withOpacity(0.4),
+                    color: const Color(0xFF6C63FF).withValues(alpha: 0.4),
                     blurRadius: 16,
                     offset: const Offset(0, 6),
                   ),

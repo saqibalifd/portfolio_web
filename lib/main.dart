@@ -1,6 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:myportfolio/admin/all_project_admin_screen.dart.dart';
 import 'package:myportfolio/firebase_options.dart';
 import 'package:myportfolio/pages/home_page.dart';
 
@@ -19,7 +18,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       title: 'Saqib Ali',
-      // home: const AllProjectAdminScreen(),
       home: const HomePage(),
     );
   }

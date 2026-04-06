@@ -62,7 +62,7 @@ class AllMessagesAdminScreen extends StatelessWidget {
                           shape: BoxShape.circle,
                           gradient: RadialGradient(
                             colors: [
-                              const Color(0xFF00C9B1).withOpacity(0.12),
+                              const Color(0xFF00C9B1).withValues(alpha: 0.12),
                               Colors.transparent,
                             ],
                           ),
@@ -228,7 +228,7 @@ class _MessageCardState extends State<_MessageCard> {
         border: Border.all(color: const Color(0xFF2A2A3A), width: 1),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.3),
+            color: Colors.black.withValues(alpha: 0.3),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -240,8 +240,8 @@ class _MessageCardState extends State<_MessageCard> {
           color: Colors.transparent,
           child: InkWell(
             onTap: () => setState(() => _expanded = !_expanded),
-            splashColor: accent.withOpacity(0.06),
-            highlightColor: accent.withOpacity(0.03),
+            splashColor: accent.withValues(alpha: 0.6),
+            highlightColor: accent.withValues(alpha: 0.03),
             child: Padding(
               padding: const EdgeInsets.all(16),
               child: Column(
@@ -260,12 +260,12 @@ class _MessageCardState extends State<_MessageCard> {
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                             colors: [
-                              accent.withOpacity(0.35),
-                              accent.withOpacity(0.12),
+                              accent.withValues(alpha: 0.35),
+                              accent.withValues(alpha: 0.12),
                             ],
                           ),
                           border: Border.all(
-                            color: accent.withOpacity(0.4),
+                            color: accent.withValues(alpha: 0.4),
                             width: 1.5,
                           ),
                         ),
@@ -457,7 +457,7 @@ class _SmallAction extends StatelessWidget {
           width: 30,
           height: 30,
           decoration: BoxDecoration(
-            color: color.withOpacity(0.12),
+            color: color.withValues(alpha: 0.12),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Icon(icon, color: color, size: 15),
@@ -507,7 +507,7 @@ class _EmptyState extends StatelessWidget {
             height: 80,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: const Color(0xFF00C9B1).withOpacity(0.1),
+              color: const Color(0xFF00C9B1).withValues(alpha: 0.1),
             ),
             child: const Icon(
               Icons.mark_email_unread_rounded,
@@ -551,7 +551,7 @@ class _ErrorState extends StatelessWidget {
               height: 80,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: const Color(0xFFFF5C5C).withOpacity(0.1),
+                color: const Color(0xFFFF5C5C).withValues(alpha: 0.1),
               ),
               child: const Icon(
                 Icons.error_outline_rounded,

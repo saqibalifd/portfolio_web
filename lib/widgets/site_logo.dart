@@ -58,7 +58,7 @@ class _SiteLogoState extends State<SiteLogo>
   void _showPasswordDialog() {
     showDialog(
       context: context,
-      barrierColor: Colors.black.withOpacity(0.75),
+      barrierColor: Colors.black.withValues(alpha: 0.75),
       builder: (_) => _PasswordDialog(
         onSuccess: () {
           Navigator.of(context).pop(); // close dialog
@@ -110,7 +110,9 @@ class _SiteLogoState extends State<SiteLogo>
                         shape: BoxShape.circle,
                         color: i < _tapCount
                             ? CustomColor.yellowSecondary
-                            : CustomColor.yellowSecondary.withOpacity(0.2),
+                            : CustomColor.yellowSecondary.withValues(
+                                alpha: 0.2,
+                              ),
                       ),
                     );
                   }),
@@ -200,13 +202,13 @@ class _PasswordDialogState extends State<_PasswordDialog>
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
               color: _hasError
-                  ? const Color(0xFFFF5C5C).withOpacity(0.6)
+                  ? const Color(0xFFFF5C5C).withValues(alpha: 0.6)
                   : const Color(0xFF2A2A3A),
               width: 1.5,
             ),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.5),
+                color: Colors.black.withValues(alpha: 0.5),
                 blurRadius: 30,
                 offset: const Offset(0, 10),
               ),
@@ -219,7 +221,7 @@ class _PasswordDialogState extends State<_PasswordDialog>
               Container(
                 padding: const EdgeInsets.all(14),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF6C63FF).withOpacity(0.12),
+                  color: const Color(0xFF6C63FF).withValues(alpha: 0.12),
                   shape: BoxShape.circle,
                 ),
                 child: const Icon(
@@ -368,7 +370,9 @@ class _PasswordDialogState extends State<_PasswordDialog>
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: [
                             BoxShadow(
-                              color: const Color(0xFF6C63FF).withOpacity(0.35),
+                              color: const Color(
+                                0xFF6C63FF,
+                              ).withValues(alpha: 0.35),
                               blurRadius: 12,
                               offset: const Offset(0, 4),
                             ),

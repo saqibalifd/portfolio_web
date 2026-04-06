@@ -22,7 +22,7 @@ class ProjectCardWidget extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           //project image
-          Image.asset(
+          Image.network(
             project.thumbnail,
             height: 140,
             width: 260,
@@ -67,7 +67,7 @@ class ProjectCardWidget extends StatelessWidget {
                   ),
                 ),
                 Spacer(),
-                if (project.sourceCode != null)
+                if (project.sourceCode != null && project.sourceCode != '')
                   Padding(
                     padding: const EdgeInsets.only(right: 6),
                     child: InkWell(
@@ -80,14 +80,14 @@ class ProjectCardWidget extends StatelessWidget {
                       ),
                     ),
                   ),
-                if (project.iosLink != null)
+                if (project.iosLink != null && project.iosLink != '')
                   InkWell(
                     onTap: () {
                       web.window.open(project.iosLink!, "_blank");
                     },
                     child: Image.asset('assets/icons/apple.png', width: 19),
                   ),
-                if (project.androidLink != null)
+                if (project.androidLink != null && project.androidLink != '')
                   Padding(
                     padding: const EdgeInsets.only(left: 6),
                     child: InkWell(
@@ -97,7 +97,7 @@ class ProjectCardWidget extends StatelessWidget {
                       child: Image.asset('assets/icons/android.png', width: 19),
                     ),
                   ),
-                if (project.webLink != null)
+                if (project.webLink != null && project.webLink != '')
                   Padding(
                     padding: const EdgeInsets.only(left: 6),
                     child: InkWell(

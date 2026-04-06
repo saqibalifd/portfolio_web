@@ -257,7 +257,7 @@ class _ProjectSkeletonLoaderState extends State<_ProjectSkeletonLoader>
           width: widget.screenWidth,
           padding: const EdgeInsets.fromLTRB(25, 20, 25, 20),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               // Section title skeleton
               _SkeletonBox(

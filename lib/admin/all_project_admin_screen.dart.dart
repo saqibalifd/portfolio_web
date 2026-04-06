@@ -48,7 +48,7 @@ class AllProjectAdminScreen extends StatelessWidget {
                           shape: BoxShape.circle,
                           gradient: RadialGradient(
                             colors: [
-                              const Color(0xFF6C63FF).withOpacity(0.15),
+                              const Color(0xFF6C63FF).withValues(alpha: 0.615),
                               Colors.transparent,
                             ],
                           ),
@@ -214,7 +214,7 @@ class _MessagesButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
-              color: const Color(0xFF00C9B1).withOpacity(0.30),
+              color: const Color(0xFF00C9B1).withValues(alpha: 0.30),
               blurRadius: 12,
               offset: const Offset(0, 4),
             ),
@@ -257,7 +257,7 @@ class _AddButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
-              color: const Color(0xFF6C63FF).withOpacity(0.35),
+              color: const Color(0xFF6C63FF).withValues(alpha: 0.35),
               blurRadius: 12,
               offset: const Offset(0, 4),
             ),
@@ -310,7 +310,7 @@ class _ProjectCard extends StatelessWidget {
         border: Border.all(color: const Color(0xFF2A2A3A), width: 1),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.3),
+            color: Colors.black.withValues(alpha: 0.3),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -322,8 +322,8 @@ class _ProjectCard extends StatelessWidget {
           color: Colors.transparent,
           child: InkWell(
             onTap: onEdit,
-            splashColor: const Color(0xFF6C63FF).withOpacity(0.08),
-            highlightColor: const Color(0xFF6C63FF).withOpacity(0.04),
+            splashColor: const Color(0xFF6C63FF).withValues(alpha: 0.08),
+            highlightColor: const Color(0xFF6C63FF).withValues(alpha: 0.04),
             child: Padding(
               padding: const EdgeInsets.all(16),
               child: Row(
@@ -402,9 +402,9 @@ class _TypeBadge extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.12),
+        color: color.withValues(alpha: 0.12),
         borderRadius: BorderRadius.circular(6),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -447,7 +447,7 @@ class _ProjectThumbnail extends StatelessWidget {
         height: 52,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: accent.withOpacity(0.4), width: 1.5),
+          border: Border.all(color: accent.withValues(alpha: 0.4), width: 1.5),
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(10.5),
@@ -471,9 +471,12 @@ class _ProjectThumbnail extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [accent.withOpacity(0.3), accent.withOpacity(0.1)],
+          colors: [
+            accent.withValues(alpha: 0.3),
+            accent.withValues(alpha: 0.1),
+          ],
         ),
-        border: Border.all(color: accent.withOpacity(0.4), width: 1.5),
+        border: Border.all(color: accent.withValues(alpha: 0.4), width: 1.5),
       ),
       child: Icon(Icons.folder_rounded, color: accent, size: 22),
     );
@@ -498,7 +501,7 @@ class _IconAction extends StatelessWidget {
         width: 32,
         height: 32,
         decoration: BoxDecoration(
-          color: color.withOpacity(0.12),
+          color: color.withValues(alpha: 0.12),
           borderRadius: BorderRadius.circular(8),
         ),
         child: Icon(icon, color: color, size: 16),
@@ -547,7 +550,7 @@ class _EmptyState extends StatelessWidget {
             height: 80,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: const Color(0xFF6C63FF).withOpacity(0.1),
+              color: const Color(0xFF6C63FF).withValues(alpha: 0.1),
             ),
             child: const Icon(
               Icons.layers_rounded,
