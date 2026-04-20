@@ -336,6 +336,7 @@ class _SkeletonCard extends StatelessWidget {
             width: double.infinity,
             height: 150,
             color: base,
+
             highlight: highlight,
             radius: 12,
           ),

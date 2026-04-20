@@ -72,7 +72,7 @@ class ProjectCardWidget extends StatelessWidget {
                     padding: const EdgeInsets.only(right: 6),
                     child: InkWell(
                       onTap: () {
-                        web.window.open(project.iosLink!, "_blank");
+                        web.window.open(project.sourceCode!, "_blank");
                       },
                       child: Image.asset(
                         'assets/images/sourceCodeWhite.png',
